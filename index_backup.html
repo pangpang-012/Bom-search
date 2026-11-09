@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="test()">TEST</button>
+
+<script>
+
+async function test(){
+
+const r =
+await fetch(
+"https://script.google.com/macros/s/AKfycbybNjGsMSqwzO6wWQz9J0naP-KyETiZYdgJAPyu7_-E58Ej4xBDQfKg-Rp-6Pc9oEYRtQ/exec?api=getData"
+);
+
+const data = await r.json();
+
+alert(data.length);
+
+}
+
+</script>
+
+</body>
+</html>
