@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="utf-8">
-
-<title>BOM SEARCH</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta http-equiv="refresh"
-content="0;url=https://script.google.com/macros/s/AKfycbzRIJDUErQu5D1PNHbeWp1A89VeY6y2u8ufM7o1kuManQRz_3CfaD8StZdzBSrnKvuVcA/exec">
-
-<link rel="apple-touch-icon" href="Icon.png">
-
-</head>
-
 <body>
 
-Loading...
+<button onclick="test()">TEST</button>
+
+<script>
+
+async function test(){
+
+const r =
+await fetch(
+"https://script.google.com/macros/s/AKfycbybNjGsMSqwzO6wWQz9J0naP-KyETiZYdgJAPyu7_-E58Ej4xBDQfKg-Rp-6Pc9oEYRtQ/exec?api=getData"
+);
+
+const data = await r.json();
+
+alert(data.length);
+
+}
+
+</script>
 
 </body>
 </html>
